@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="http://213.14.92.74/Framework.js" ></script>
+</head>
+<body>
+<script>
+    var satir = 0;
+    var sutun = 0;
+    var genislik = 55;
+    var kare1 = new Kutu();
+    kare1.arkaplan = "pink";
+    var kare2 = new Kutu();
+    kare2.arkaplan = "black";
+    while (satir < 8) {
+        kare1.y = satir * genislik;
+        kare2.y = satir * genislik;
+        satir++;
+        sutun = 0;
+        while (sutun < 8) {
+            kare1.x = sutun * genislik;
+            kare2.x = sutun * genislik;
+            sutun++;
+            if ((satir + sutun) % 2 == 0) {
+                kare1.ciz();
+            }
+            else {
+                kare2.ciz();
+            }
+        }
+    }
+</script>
+</body>
+</html>
